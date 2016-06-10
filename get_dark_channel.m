@@ -15,3 +15,5 @@ for j = 1 : m
         dark_channel(j,i) = min(patch(:));
      end
 end
+
+end

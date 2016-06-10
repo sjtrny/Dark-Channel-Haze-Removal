@@ -18,3 +18,5 @@ for k = 1 : n_search_pixels
 end
 
 atmosphere = accumulator / n_search_pixels;
+
+end
