@@ -1,4 +1,4 @@
-function [ L ] = get_laplacian( image, trimap_all )
+function [ L ] = get_laplacian( image )
 %GET_LAPLACIAN
 
 [m, n, c] = size(image);
@@ -11,11 +11,9 @@ epsilon = 0.0000001;
 
 max_num_neigh = (win_rad*2+1)^2;
 
-trimap_all = imerode( trimap_all, strel('disk', win_rad*2+1) );
-
 ind_mat = reshape( 1:img_size, m, n);
 
-indices = find(1 - trimap_all);
+indices = 1 : (m*n);
 
 num_ind = length(indices);
 

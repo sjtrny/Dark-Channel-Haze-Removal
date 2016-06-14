@@ -22,7 +22,7 @@ atmosphere = get_atmosphere(image, dark_channel);
 
 trans_est = get_transmission_estimate(image, atmosphere, omega, win_size);
 
-L = get_laplacian(image, zeros(size(image)));
+L = get_laplacian(image);
 
 A = L + lambda * speye(size(L));
 b = lambda * trans_est(:);
